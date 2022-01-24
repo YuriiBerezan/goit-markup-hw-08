@@ -1,0 +1,50 @@
+body {
+  color: $main-color;
+}
+img {
+  display: block;
+}
+a:hover,
+a:focus {
+  color: $web-color;
+}
+
+input:hover,
+input:focus,
+textarea:focus,
+textarea:hover {
+  border: 1px solid $web-color;
+}
+.btn {
+  cursor: pointer;
+
+  background: $web-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: $contacts-footer-color;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and(min-width: $desctop) {
+    width: $desctop;
+  }
+}
+.section {
+  padding: 94px 0;
+}
