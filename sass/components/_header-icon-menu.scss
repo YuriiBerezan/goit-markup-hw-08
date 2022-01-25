@@ -1,20 +1,24 @@
 .menu-button {
-  cursor: pointer;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  & .icon-menu {
-    display: none;
-  }
-
-  &.is-open .icon-menu {
+  display: none;
+  @media screen and (max-width: 767px) {
     display: block;
-  }
+    cursor: pointer;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 
-  &.is-open .icon-cross {
-    display: none;
+    & .icon-menu {
+      display: none;
+    }
+
+    &.is-open .icon-menu {
+      display: block;
+    }
+
+    &.is-open .icon-cross {
+      display: none;
+    }
   }
 }

@@ -1,23 +1,81 @@
 .header-contacts {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  background-color: #fff;
-  color: $contacts-header-color;
-  transition: $animation-color;
+  display: none;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  font-style: normal;
-
-  &__mail {
-    margin-left: auto;
-    margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    background-color: tomato;
   }
-  &__icon {
-    fill: currentColor;
-    margin-right: 10px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    // background-color: teal;
+  }
+
+  @media screen and (min-width: $desctop) {
+    display: flex;
+    align-items: baseline;
+    padding: 20px 0;
+    // flex-direction: column;
+    // background-color: teal;
+    color: $contacts-header-color;
+    transition: $animation-color;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    font-style: normal;
+    letter-spacing: 0.02em;
   }
 }
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .header-contacts__link--mail,
+  .header-contacts__link--tel {
+    color: $contacts-header-color;
+    transition: $animation-color;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    font-style: normal;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .header-contacts__link--mail,
+  .header-contacts__link--tel {
+    color: $contacts-header-color;
+    transition: $animation-color;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    font-style: normal;
+    letter-spacing: 0.02em;
+  }
+}
+
+// padding: 20px 0;
+// color: $contacts-header-color;
+// transition: $animation-color;
+// font-family: Roboto;
+// font-weight: 500;
+// font-size: 14px;
+// line-height: 1.14;
+// font-style: normal;
+// letter-spacing: 0.02em;
+
+// &__mail {
+//   margin-left: auto;
+//   margin-right: 50px;
+// }
+// &__icon {
+//   fill: currentColor;
+//   margin-right: 10px;
+// }

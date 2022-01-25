@@ -6,7 +6,7 @@
 .header__block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   @media screen and (max-width: $tablet) {
     height: 60px;
   }
