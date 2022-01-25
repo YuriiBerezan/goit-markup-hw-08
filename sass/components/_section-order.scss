@@ -1,37 +1,44 @@
 .order {
   margin-right: auto;
   margin-left: auto;
-  text-align: center;
-  height: 400px;
-
-  @media screen and(min-width: $desctop) {
+  @media screen and (max-width: $desctop) {
+    height: 400px;
+  }
+  @media screen and (min-width: $desctop) {
     height: 600px;
   }
 }
 .order__overlay {
   background-color: $background-color;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/background_mobile.jpg);
+  // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  //   url(/images/background_mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  // padding: 0;
 
-  @media screen and(min-width: $mobile) {
+  @media screen and (max-width: $tablet) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/background_tablet.jpg);
+      url(../images/background_mobile.jpg);
   }
-
-  @media screen and(min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $desctop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/backgound.jpg);
+      url(../images/background_tablet.jpg);
+  }
+  @media screen and (min-width: $desctop) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/background_desctop.jpg);
   }
 }
 
 .order__center {
   text-align: center;
-  padding: 118px 0;
+  align-items: center;
 
-  @media screen and(min-width: $desctop) {
+  @media screen and (max-width: $desctop) {
+    padding: 118px 0;
+  }
+  @media screen and (min-width: $desctop) {
     padding: 200px 0;
   }
 }
@@ -40,10 +47,13 @@
   text-transform: uppercase;
   margin-bottom: 30px;
   color: $contacts-footer-color;
-  font-size: 26px;
-  line-height: 1.6;
+  letter-spacing: 0.06em;
 
-  @media screen and(min-width: $desctop) {
+  @media screen and (max-width: $desctop) {
+    font-size: 26px;
+    line-height: 1.6;
+  }
+  @media screen and (min-width: $desctop) {
     font-size: 44px;
     line-height: 1.36;
   }

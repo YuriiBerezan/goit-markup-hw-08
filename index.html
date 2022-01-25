@@ -9,13 +9,14 @@
 
     <title>Студия</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./styles.css" /> -->
   </head>
@@ -27,6 +28,7 @@
           ><span class="header-logo__text--web">Web</span
           ><span class="header-logo__text--studio">Studio</span>
         </a>
+
         <!-- Навигация на другие страницы -->
         <nav>
           <ul class="header-nav">
@@ -55,6 +57,12 @@
           </svg>
           +38 096 111 11 11</a
         >
+        <button type="button" class="menu-button is-open" aria-expanded="false" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="images/svg/icons.svg#icon-cross"></use>
+            <use class="icon-menu" href="images/svg/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -62,8 +70,8 @@
     <main>
       <!--Секция заказа-->
       <section class="order">
-        <div class="order order__overlay">
-          <div class="container order__center">
+        <div class="order__overlay">
+          <div class="order__center">
             <h1 class="order__title">
               Эффективные решения <br />
               для вашего бизнеса
@@ -620,5 +628,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
