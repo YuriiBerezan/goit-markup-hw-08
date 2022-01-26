@@ -1,12 +1,12 @@
-.header {
+.page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
 }
-
-.header__block {
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
   @media screen and (max-width: $tablet) {
     height: 60px;
   }

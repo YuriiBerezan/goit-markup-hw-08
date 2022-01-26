@@ -1,5 +1,6 @@
 body {
   color: $main-color;
+  font-family: Roboto;
 }
 img {
   display: block;
@@ -33,19 +34,19 @@ textarea:hover {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  background-color: yellowgreen;
+  // background-color: yellowgreen;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
-    background-color: aqua;
+    // background-color: aqua;
   }
   @media screen and (min-width: $tablet) {
     width: $tablet;
-    background-color: tomato;
+    // background-color: tomato;
   }
   @media screen and(min-width: $desctop) {
     width: $desctop;
-    background-color: tan;
+    // background-color: tan;
   }
 }
 .section {

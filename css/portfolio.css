@@ -30,6 +30,7 @@ textarea {
 
 body {
   color: #212121;
+  font-family: Roboto;
 }
 
 img {
@@ -65,27 +66,23 @@ textarea:hover {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  background-color: yellowgreen;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    background-color: aqua;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    background-color: tomato;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    background-color: tan;
   }
 }
 
@@ -93,30 +90,30 @@ textarea:hover {
   padding: 94px 0;
 }
 
-.header {
+.page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-.header__block {
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
-  .header__block {
+  .navigation {
     height: 60px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header__block {
+  .navigation {
     height: 80px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-logo {
     padding: 16px 0;
   }
@@ -156,43 +153,56 @@ textarea:hover {
   color: #000;
 }
 
-.menu-button {
-  display: none;
+.menu-container {
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
-  .menu-button {
-    display: block;
-    cursor: pointer;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  }
-  .menu-button .icon-menu {
+  .menu-container {
     display: none;
-  }
-  .menu-button.is-open .icon-menu {
-    display: block;
-  }
-  .menu-button.is-open .icon-cross {
-    display: none;
-  }
-}
-
-.header-nav {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .header-nav {
-    display: block;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
-    background-color: #fff;
+    height: 796px;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
   }
 }
 
@@ -204,11 +214,10 @@ textarea:hover {
     margin-right: 50px;
   }
   .header-nav__item:last-child {
-    margin-right: 0;
+    margin-right: 84px;
   }
   .header-nav__title {
     padding: 20px 0;
-    font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -232,19 +241,58 @@ textarea:hover {
   }
 }
 
-.header-contacts {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .header-nav__item:last-child {
+    margin-right: 305px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav__title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+.header-nav__title--current {
+  position: relative;
+  color: #2196f3;
+}
+
+.header-nav__title--current::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 767px) {
   .header-contacts {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 50%;
-    background-color: tomato;
+  }
+}
+
+.header-contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts__icon {
+    display: none;
   }
 }
 
@@ -255,28 +303,14 @@ textarea:hover {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header-contacts {
-    display: flex;
-    align-items: baseline;
-    padding: 20px 0;
-    color: #757575;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    font-style: normal;
-    letter-spacing: 0.02em;
-  }
+.header-contacts__link--mail {
+  margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header-contacts__link--mail,
-  .header-contacts__link--tel {
+@media screen and (min-width: 768px) {
+  .header-contacts__link--mail, .header-contacts__link--tel {
     color: #757575;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: Roboto;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.14;
@@ -286,16 +320,39 @@ textarea:hover {
 }
 
 @media screen and (min-width: 1200px) {
-  .header-contacts__link--mail,
-  .header-contacts__link--tel {
-    color: #757575;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: Roboto;
-    font-weight: 500;
+  .header-contacts__link--mail, .header-contacts__link--tel {
     font-size: 14px;
-    line-height: 1.14;
-    font-style: normal;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts__link--mail {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts__link--tel {
+    font-size: 34px;
+    line-height: 1.17;
+    color: #2196f3;
     letter-spacing: 0.02em;
+    margin-left: 40px;
+    order: 1;
+    margin-top: 302px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts__link--mail {
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+    order: 2;
+    margin-left: 40px;
+    margin-top: 32px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
