@@ -1,0 +1,47 @@
+$icons: 'antenna', 'clock', 'diagram', 'astronaut';
+
+@each $iconName in $icons {
+  .icon-#{$iconName}::before {
+    background-image: url(../images/svg/#{$iconName}.svg);
+  }
+}
+
+.peculiarities {
+  display: block;
+  width: 100%;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item::before {
+    display: block;
+    content: '';
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $team-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  &__description {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $contacts-header-color;
+    letter-spacing: 0.03em;
+  }
+}

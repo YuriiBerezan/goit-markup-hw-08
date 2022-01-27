@@ -87,7 +87,13 @@ textarea:hover {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .page-header {
@@ -154,7 +160,7 @@ textarea:hover {
 }
 
 .menu-container {
-  background-color: tan;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -263,7 +269,10 @@ textarea:hover {
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: 40px;
-    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  .header-nav__title__title:first-child {
+    margin-top: 48px;
   }
 }
 
@@ -366,7 +375,6 @@ textarea:hover {
   .header-social-links {
     margin-left: 40px;
     margin-top: 64px;
-    margin-bottom: 48px;
   }
   .header-social-links__list {
     display: flex;

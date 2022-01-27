@@ -87,7 +87,13 @@ textarea:hover {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .page-header {
@@ -154,7 +160,7 @@ textarea:hover {
 }
 
 .menu-container {
-  background-color: tan;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -263,7 +269,10 @@ textarea:hover {
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: 40px;
-    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  .header-nav__title__title:first-child {
+    margin-top: 48px;
   }
 }
 
@@ -366,7 +375,6 @@ textarea:hover {
   .header-social-links {
     margin-left: 40px;
     margin-top: 64px;
-    margin-bottom: 48px;
   }
   .header-social-links__list {
     display: flex;
@@ -480,6 +488,63 @@ textarea:hover {
 
 .order__btn {
   padding: 10px 32px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/svg/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/svg/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/svg/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/svg/astronaut.svg);
+}
+
+.peculiarities {
+  display: block;
+  width: 100%;
+}
+
+.peculiarities__item {
+  margin-bottom: 30px;
+}
+
+.peculiarities__item:last-child {
+  margin-bottom: 0;
+}
+
+.peculiarities__item::before {
+  display: block;
+  content: '';
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.peculiarities__title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+.peculiarities__description {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #757575;
+  letter-spacing: 0.03em;
 }
 
 .backdrop {
