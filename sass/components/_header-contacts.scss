@@ -1,7 +1,21 @@
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin margin($l, $t) {
+  margin-left: $l;
+  margin-top: $t;
+}
 .header-contacts {
   @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
+    @include flex;
   }
 
   &__icon {
@@ -13,8 +27,7 @@
     }
   }
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    display: flex;
-    flex-direction: column;
+    @include flex;
   }
 
   &__link--mail {
@@ -26,12 +39,7 @@
     @media screen and (min-width: $tablet) {
       color: $contacts-header-color;
       transition: $animation-color;
-
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 1.14;
-      font-style: normal;
-      letter-spacing: 0.02em;
+      @include font(500, 12px, 1.14, 0.02em);
     }
   }
   &__link--mail,
@@ -48,33 +56,26 @@
   }
   &__link--tel {
     @media screen and (max-width: 767px) {
-      font-size: 34px;
-      line-height: 1.17;
+      @include font(500, 34px, 1.17, 0.02em);
       color: $web-color;
-      letter-spacing: 0.02em;
-      margin-left: 40px;
+      @include margin(40px, 302px);
+
       order: 1;
-      margin-top: 302px;
     }
   }
   &__link--mail {
     @media screen and (max-width: 767px) {
-      font-size: 24px;
-      line-height: 1.17;
-      letter-spacing: 0.02em;
+      @include font(500, 24px, 1.17, 0.02em);
       color: $contacts-header-color;
       order: 2;
-      margin-left: 40px;
-      margin-top: 32px;
+      @include margin(40px, 32px);
     }
   }
 }
 
 .header-social-links {
   @media screen and (max-width: 767px) {
-    margin-left: 40px;
-    margin-top: 64px;
-    // margin-bottom: 48px;
+    @include margin(40px, 64px); // margin-bottom: 48px;
     &__list {
       display: flex;
     }
@@ -92,11 +93,8 @@
     }
 
     &__title {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 1.2;
+      @include font(500, 18px, 1.2, 0.02em);
       color: $web-color;
-      letter-spacing: 0.02em;
     }
   }
   @media screen and (min-width: $tablet) {
