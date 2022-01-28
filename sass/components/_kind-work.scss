@@ -1,0 +1,52 @@
+@media screen and (max-width: 1199px) {
+  .kind-work {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .kind-work {
+    display: block;
+    padding-top: 0;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.17;
+      color: $main-color;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+    &__item {
+      margin-right: 30px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+    &__img {
+      position: relative;
+    }
+
+    &__overlay {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      color: $contacts-footer-color;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.03em;
+      padding: 27px 75px;
+      width: 100%;
+      height: 70px;
+      background-color: rgba(47, 48, 58, 0.8);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.15;
+    }
+  }
+}

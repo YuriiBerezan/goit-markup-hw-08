@@ -1,0 +1,118 @@
+.our-team {
+  background: $team-color;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: $main-color;
+  }
+}
+
+.team-cards {
+  //   display: block;
+  //   justify-content: center;
+  //   flex-direction: column;
+
+  //   &__item:last-child {
+  //     margin-right: 0;
+  //   }
+
+  &__item {
+    background-color: $contacts-footer-color;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 30px;
+    width: 100%;
+    // margin-right: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    &__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      width: calc(50%-30px);
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: $desctop) {
+    &__item {
+      width: calc(25%-30px);
+      margin-bottom: 0;
+    }
+    &__item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+    &__item:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-description {
+  padding: 30px 0;
+
+  %team-description {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  &__names {
+    @extend %team-description;
+    color: $main-color;
+  }
+  &__position {
+    @extend %team-description;
+    color: $contacts-header-color;
+  }
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    color: $link-color;
+    transition: $animation-color, $animation-bgcolor;
+  }
+
+  &__item {
+    margin-right: 10px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $contacts-footer-color;
+    background-color: $web-color;
+  }
+}
