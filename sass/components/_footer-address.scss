@@ -1,0 +1,26 @@
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+  //   margin: 0 auto;
+
+  &__links {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $contacts-footer-color;
+    margin-bottom: 20px;
+    transition: $animation-color;
+    // text-align: center;
+  }
+  &__contacts {
+    color: $contacts-footer-color;
+    opacity: 0.6;
+    margin-bottom: 9px;
+    transition: $animation-color;
+    // text-align: center;
+  }
+}

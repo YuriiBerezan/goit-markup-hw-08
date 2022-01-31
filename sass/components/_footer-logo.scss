@@ -1,0 +1,19 @@
+.footer-logo {
+  display: inline-block;
+  font-family: Raleway;
+  margin-bottom: 20px;
+
+  &__text {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    font-family: Raleway;
+
+    &--web {
+      color: $web-color;
+    }
+    &--studio {
+      color: $contacts-footer-color;
+    }
+  }
+}
