@@ -163,6 +163,7 @@ textarea:hover {
 
 .menu-container {
   background-color: #fff;
+  z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
@@ -187,7 +188,7 @@ textarea:hover {
 }
 
 .menu-button {
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -195,19 +196,24 @@ textarea:hover {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: #212121;
 }
 
 .menu-button .icon-cross {
   display: none;
 }
 
-.menu-button .icon-menu:hover {
-  fill: #2196f3;
+.menu-button .icon-menu {
+  fill: currentColor;
+}
+
+.menu-button .menu-button:hover {
+  color: #2196f3;
 }
 
 .menu-button.is-open .icon-cross {
   display: block;
-  z-index: 2;
+  z-index: 4;
 }
 
 .menu-button.is-open .icon-menu {

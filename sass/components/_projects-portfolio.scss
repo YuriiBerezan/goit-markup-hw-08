@@ -92,7 +92,7 @@
   }
   @media screen and (min-width: $desctop) {
     &__item {
-      width: calc(33.3% - 30px);
+      width: calc(33.3% - 20px);
     }
 
     &__item:nth-child(3n) {
@@ -120,14 +120,21 @@
 
   font-size: 18px;
   line-height: 28px;
-  padding: 63px 24px;
-
-  &__item:hover & {
+  @media screen and (max-width: 767px) {
+    padding: 77px 24px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding: 25px 24px;
+  }
+  @media screen and (min-width: $desctop) {
+    padding: 37px 24px;
+  }
+  .projects-cards__item:hover & {
     transform: translateY(0);
   }
 }
 .projects__container {
-  padding: 20px 24px;
+  padding: 20px 15px;
 }
 .projects__title {
   font-weight: 700;

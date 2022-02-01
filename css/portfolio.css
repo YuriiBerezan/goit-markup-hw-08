@@ -163,6 +163,7 @@ textarea:hover {
 
 .menu-container {
   background-color: #fff;
+  z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
@@ -187,7 +188,7 @@ textarea:hover {
 }
 
 .menu-button {
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -195,19 +196,24 @@ textarea:hover {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: #212121;
 }
 
 .menu-button .icon-cross {
   display: none;
 }
 
-.menu-button .icon-menu:hover {
-  fill: #2196f3;
+.menu-button .icon-menu {
+  fill: currentColor;
+}
+
+.menu-button .menu-button:hover {
+  color: #2196f3;
 }
 
 .menu-button.is-open .icon-cross {
   display: block;
-  z-index: 2;
+  z-index: 4;
 }
 
 .menu-button.is-open .icon-menu {
@@ -745,7 +751,7 @@ textarea:hover {
 
 @media screen and (min-width: 1200px) {
   .projects-cards__item {
-    width: calc(33.3% - 30px);
+    width: calc(33.3% - 20px);
   }
   .projects-cards__item:nth-child(3n) {
     margin-right: 0;
@@ -771,15 +777,32 @@ textarea:hover {
   letter-spacing: 0.03em;
   font-size: 18px;
   line-height: 28px;
-  padding: 63px 24px;
 }
 
-.projects-cards__text__item:hover .projects-cards__text {
+@media screen and (max-width: 767px) {
+  .projects-cards__text {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects-cards__text {
+    padding: 25px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-cards__text {
+    padding: 37px 24px;
+  }
+}
+
+.projects-cards__item:hover .projects-cards__text {
   transform: translateY(0);
 }
 
 .projects__container {
-  padding: 20px 24px;
+  padding: 20px 15px;
 }
 
 .projects__title {

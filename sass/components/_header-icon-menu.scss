@@ -1,7 +1,7 @@
 .menu-container {
   background-color: $contacts-footer-color;
-  // background-color: tan;
-  // height: 767px;
+
+  z-index: 2;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -23,7 +23,7 @@
 }
 
 .menu-button {
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -31,17 +31,21 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  color: $main-color;
 
   & .icon-cross {
     display: none;
   }
-  & .icon-menu:hover {
-    fill: $web-color;
+  & .icon-menu {
+    fill: currentColor;
+  }
+  .menu-button:hover {
+    color: $web-color;
   }
 
   &.is-open .icon-cross {
     display: block;
-    z-index: 2;
+    z-index: 4;
   }
 
   &.is-open .icon-menu {
