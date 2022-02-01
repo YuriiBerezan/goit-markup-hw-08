@@ -1,7 +1,7 @@
 .order {
   margin-right: auto;
   margin-left: auto;
-  @media screen and (max-width: $desctop) {
+  @media screen and (max-width: 1199px) {
     height: 400px;
   }
   @media screen and (min-width: $desctop) {
@@ -10,24 +10,37 @@
 }
 .order__overlay {
   background-color: $background-color;
-  // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //   url(/images/background_mobile.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // padding: 0;
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/background_mobile.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/background_mobile@2x.jpg);
+    }
   }
-  @media screen and (min-width: $tablet) and (max-width: $desctop) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/background_tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/background_tablet@2x.jpg);
+    }
   }
   @media screen and (min-width: $desctop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/background_desctop.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/background_desctop@2x.jpg);
+    }
   }
 }
 
