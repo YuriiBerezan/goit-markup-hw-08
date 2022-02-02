@@ -9,9 +9,9 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
-@mixin margin($l, $t) {
-  margin-left: $l;
-  margin-top: $t;
+@mixin padding($l, $t) {
+  padding-left: $l;
+  padding-top: $t;
 }
 .header-contacts {
   @media screen and (max-width: 767px) {
@@ -58,7 +58,7 @@
     @media screen and (max-width: 767px) {
       @include font(500, 34px, 1.17, 0.02em);
       color: $web-color;
-      @include margin(40px, 302px);
+      @include padding(40px, 302px);
 
       order: 1;
     }
@@ -68,14 +68,15 @@
       @include font(500, 24px, 1.17, 0.02em);
       color: $contacts-header-color;
       order: 2;
-      @include margin(40px, 32px);
+      @include padding(40px, 32px);
     }
   }
 }
 
 .header-social-links {
   @media screen and (max-width: 767px) {
-    @include margin(40px, 64px); // margin-bottom: 48px;
+    @include padding(40px, 64px);
+    // margin-bottom: 48px;
     &__list {
       display: flex;
     }

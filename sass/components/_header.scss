@@ -1,11 +1,6 @@
 .page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
-}
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   @media screen and (max-width: $tablet) {
     height: 60px;
@@ -13,4 +8,9 @@
   @media screen and (min-width: $tablet) {
     height: 80px;
   }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

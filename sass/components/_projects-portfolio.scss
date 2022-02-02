@@ -29,6 +29,11 @@
     }
   }
 }
+@media screen and (min-width: $desctop) {
+  .projects {
+    margin-bottom: 50px;
+  }
+}
 
 .projects__btn {
   padding: 6px 22px;
