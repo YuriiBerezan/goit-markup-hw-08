@@ -161,22 +161,26 @@ textarea:hover {
   color: #000;
 }
 
-.menu-container {
-  background-color: #fff;
-  z-index: 2;
-}
-
 @media screen and (max-width: 767px) {
   .menu-container {
+    background-color: #fff;
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 2;
   }
   .menu-container.is-open {
     display: block;
+  }
+  .bottom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
   }
 }
 
@@ -360,8 +364,6 @@ textarea:hover {
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: #2196f3;
-    padding-left: 40px;
-    padding-top: 302px;
     order: 1;
   }
 }
@@ -374,16 +376,11 @@ textarea:hover {
     letter-spacing: 0.02em;
     color: #757575;
     order: 2;
-    padding-left: 40px;
     padding-top: 32px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header-social-links {
-    padding-left: 40px;
-    padding-top: 64px;
-  }
   .header-social-links__list {
     display: flex;
   }

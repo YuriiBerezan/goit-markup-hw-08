@@ -1,15 +1,13 @@
-.menu-container {
-  background-color: $contacts-footer-color;
-
-  z-index: 2;
-
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .menu-container {
+    background-color: $contacts-footer-color;
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 2;
 
     &.is-open {
       display: block;
@@ -17,8 +15,17 @@
       // background-color: rgba(0, 0, 0, 0.2);
     }
   }
-
-  @media screen and (min-width: $tablet) {
+  .bottom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    // bottom: 0;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .menu-container {
     display: flex;
     align-items: center;
   }
