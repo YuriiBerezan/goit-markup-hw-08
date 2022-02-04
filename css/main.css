@@ -173,14 +173,15 @@ textarea:hover {
     z-index: 2;
   }
   .menu-container.is-open {
-    display: block;
-  }
-  .bottom {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 40px;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -188,6 +189,10 @@ textarea:hover {
   .menu-container {
     display: flex;
     align-items: center;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -279,7 +284,6 @@ textarea:hover {
     letter-spacing: 0.02em;
     color: #212121;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-left: 40px;
     margin-top: 32px;
   }
   .header-nav__title__title:first-child {
@@ -329,10 +333,6 @@ textarea:hover {
   }
 }
 
-.header-contacts__link--mail {
-  margin-bottom: 10px;
-}
-
 @media screen and (min-width: 768px) {
   .header-contacts__link--mail, .header-contacts__link--tel {
     color: #757575;
@@ -376,13 +376,18 @@ textarea:hover {
     letter-spacing: 0.02em;
     color: #757575;
     order: 2;
-    padding-top: 32px;
+    margin-top: 32px;
+    margin-bottom: 64px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .header-social-links {
+    order: 3;
+  }
   .header-social-links__list {
     display: flex;
+    margin-bottom: 48px;
   }
   .header-social-links__item {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -593,6 +598,12 @@ textarea:hover {
   line-height: 1.15;
 }
 
+@media screen and (max-width: 767px) {
+  .peculiarities__title {
+    text-align: center;
+  }
+}
+
 .peculiarities__description {
   text-align: left;
   font-size: 14px;
@@ -657,7 +668,7 @@ textarea:hover {
 
 .our-team__title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -667,6 +678,12 @@ textarea:hover {
 @media screen and (max-width: 1199px) {
   .our-team__title {
     font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__title {
+    margin-bottom: 50px;
   }
 }
 
@@ -772,11 +789,23 @@ textarea:hover {
 
 .customers__title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .customers__title {
+    font-size: 28px;
+  }
 }
 
 .customers__link {
@@ -1180,6 +1209,7 @@ textarea:hover {
   height: 40px;
   padding-left: 40px;
   margin-bottom: 28px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .modal__label {
@@ -1199,6 +1229,7 @@ textarea:hover {
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .modal__feedback::placeholder {

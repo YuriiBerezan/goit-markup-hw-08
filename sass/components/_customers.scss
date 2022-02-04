@@ -1,11 +1,17 @@
 .customers {
   &__title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     color: $main-color;
+    @media screen and (min-width: $desctop) {
+      margin-bottom: 50px;
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+    }
   }
   &__link {
     display: flex;

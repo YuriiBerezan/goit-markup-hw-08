@@ -12,17 +12,30 @@ const mobileMenuRef = document.querySelector("[data-menu]");
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
         bodyScrollLock[scrollLockMethod](document.body);
+
+        mobileMenuRef.getAttribute("aria-expanded") === "true" || false;
+         mobileMenuRef.setAttribute("aria-expanded", !expanded);
         mobileMenuRef.classList.toggle("is-open");
         
 
-        // window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-        //     if (!e.matches) return;
-        //     menuBtnRef.classList.remove('is-open');
-        //     menuBtnRef.setAttribute('aria-expanded', false);
-        //     bodyScrollLock.enableBodyScroll(document.body);
+
+
+        window.matchMedia('(max-width: 767px)').addEventListener('change', e => {
+            if (!e.matches) return;
+             mobileMenuRef.getAttribute("aria-expanded") === "true" || false;
+         mobileMenuRef.setAttribute("aria-expanded", !expanded);
+            mobileMenuRef.classList.toggle("is-open");
+            bodyScrollLock.enableBodyScroll(document.body);
+        })
+
+        window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+            if (!e.matches) return;
+            mobileMenuRef.classList.remove('is-open');
+            mobileMenuRef.setAttribute('aria-expanded', false);
+            bodyScrollLock.enableBodyScroll(document.body);
 
             
-        // })
+        })
     });
 })
     ();
