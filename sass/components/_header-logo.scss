@@ -11,6 +11,10 @@
   }
   @media screen and (min-width: $tablet) {
     padding: 26px 0;
+    margin-right: 88px;
+  }
+  @media screen and (min-width: $desctop) {
+    margin-right: 94px;
   }
 
   &__text {

@@ -28,7 +28,7 @@
     // bottom: 0;
   }
 }
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
   .menu-container {
     display: flex;
     align-items: center;
@@ -36,6 +36,16 @@
   .bottom {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
+  .bottom {
+    display: flex;
   }
 }
 

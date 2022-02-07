@@ -47,6 +47,7 @@
   &__link--tel {
     @media screen and (min-width: $desctop) {
       font-size: 14px;
+      display: flex;
     }
   }
   &__link--mail {
